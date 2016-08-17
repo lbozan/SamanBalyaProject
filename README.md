@@ -1,4 +1,4 @@
-# Saman Balya Project
+# Saman Balya Project (MVC)
 
 Balya/Cuval saman toplayıcı ve satıcı işletmeleri için gelir-gider, stok, personel ve diğer işlemler için  geliştirilmiş bir Web uygulamasıdır.
 
