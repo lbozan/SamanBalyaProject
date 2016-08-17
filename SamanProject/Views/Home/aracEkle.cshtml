@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "Araç Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css{
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap-wysihtml5.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-toggle-buttons.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/Content/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/timepicker.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/daterangepicker.css" />
+
+}
+
+<div class="portlet box purple">
+    <div class="portlet-title">
+        <h4><i class="icon-reorder"></i>Araç Ekleme Formu</h4>
+        <div class="tools">
+            <a href="javascript:;" class="collapse"></a>
+            <a href="#portlet-config" data-toggle="modal" class="config"></a>
+            <a href="javascript:;" class="reload"></a>
+            <a href="javascript:;" class="remove"></a>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        <form action="@Url.Action("aracEkle")" method="post" id="form_sample_2" class="form-horizontal" novalidate="novalidate">
+            <div class="alert alert-error hide">
+                <button class="close" data-dismiss="alert"></button>
+                Formu Boş Bırakmayın Lütfen.
+            </div>
+            <div class="alert alert-success hide">
+                <button class="close" data-dismiss="alert"></button>
+                Başarı ile Eklendi
+            </div>
+
+
+            <div class="control-group">
+                <label class="control-label">Personel Adı<span class="required">*</span></label>
+                <div class="controls">
+                    <input type="text" name="personela" data-required="1" class="span8 m-wrap">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Araç Adı<span class="required">*</span></label>
+                <div class="controls">
+                    <input type="text" name="araca" data-required="1" class="span8 m-wrap">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Plaka<span class="required">*</span></label>
+                <div class="controls">
+                    <input name="plaka" type="text" class="span8 m-wrap">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Model<span class="required">*</span></label>
+                <div class="controls">
+                    <input name="model" type="text" class="span8 m-wrap">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Not<span class="required">*</span></label>
+                <div class="controls">
+                    <input name="not" type="text" class="span8 m-wrap">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn blue icn-only">Ekle <i class="m-icon-swapright m-icon-white"></i></button>
+                <a href="@Url.Action("aracListesi")" class="btn red icn-only">İptal <i class="icon-remove icon-white"></i></button></a>
+
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript" src="~/Scripts/wysihtml5-0.3.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap-wysihtml5.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.toggle.buttons.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/additional-methods.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/bootstrap-timepicker.js"></script>
+    <script type="text/javascript" src="~/Scripts/date.js"></script>
+    <script type="text/javascript" src="~/Scripts/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap-datepicker.js"></script>
+
+}
+@section Run{
+App.setPage("form_validation");
+    }
+
+
+
+
+
